@@ -1,59 +1,21 @@
 $(document).ready(function () {
+
+    let isMobile = () => window.matchMedia('(max-width: 767.98px)').matches;
+
     let app = new Vue({
         el: '#vue-content',
         data: {
             total_count: 0,
             total_price: 0,
             cart: [
-                {
-                    id: 1,
-                    title: 'Столешница с прямоугольным вырезом (шоколадная)',
-                    price: 400,
-                    count: 1,
-                    img: 'img/temp/1.png',
-                },
-                {
-                    id: 2,
-                    title: 'Подстолье с электрорегулировкой',
-                    price: 500,
-                    count: 1,
-                    img: 'img/temp/2.png',
-                },
-                {
-                    id: 3,
-                    title: 'Столешница',
-                    price: 400,
-                    count: 1,
-                    img: 'img/temp/1.png',
-                },
-                {
-                    id: 3,
-                    title: 'Столешница',
-                    price: 400,
-                    count: 1,
-                    img: 'img/temp/1.png',
-                },
-                {
-                    id: 3,
-                    title: 'Столешница',
-                    price: 400,
-                    count: 1,
-                    img: 'img/temp/1.png',
-                },
-                {
-                    id: 2,
-                    title: 'Подстолье с электрорегулировкой',
-                    price: 500,
-                    count: 1,
-                    img: 'img/temp/2.png',
-                },
-                {
-                    id: 3,
-                    title: 'Столешница',
-                    price: 400,
-                    count: 1,
-                    img: 'img/temp/1.png',
-                },
+                // Example cart item
+                // {
+                //     id: 3,
+                //     title: 'Столешница',
+                //     price: 400,
+                //     count: 1,
+                //     img: 'img/temp/1.png',
+                // }
             ]
         },
         methods: {
@@ -190,6 +152,17 @@ $(document).ready(function () {
             change_constructor_list_3(false);
         }
     });
+    $('.js-section-btn').on('click', function () {
+        if (!isMobile()) {
+            $('html, body').animate({
+                scrollTop: $('#constructor-types').offset().top
+            }, 1000);
+        } else {
+            $('html, body').animate({
+                scrollTop: $('#constructor-items').offset().top
+            }, 1000);
+        }
+    });
     /* ----- Constructor kinds changer END ----- */
 
 
@@ -210,22 +183,29 @@ $(document).ready(function () {
         }
     });
 
-    $('#constructor-modal').on('shown.bs.modal', function (e) {
-        $('.js-modal-slick').slick('refresh');
-        $('.js-modal-slick-mini').slick('refresh');
+    $('#constructor-modal').on({
+        'show.bs.modal': function (e) {
+            console.log('test');
+
+        },
+        'shown.bs.modal': function (e) {
+            $('.js-modal-slick').slick('refresh');
+            $('.js-modal-slick-mini').slick('refresh');
+
+            $('.constructor-item-preloader').hide();
+            $('.modal-constructor__wrapper').show();
+        }
     });
 
     $('.js-constructor__item').on('click', function (event) {
-        $('#constructor-modal').modal('show');
-        $('.js-modal-slick').slick({
+        $('.js-modal-slick').not('.slick-initialized').slick({
             slidesToShow: 1,
             slidesToScroll: 1,
-            // fade: true,
             asNavFor: '.js-modal-slick-mini',
             infinite: false,
             arrows: false
         });
-        $('.js-modal-slick-mini').slick({
+        $('.js-modal-slick-mini').not('.slick-initialized').slick({
             infinite: false,
             slidesToShow: 5,
             slidesToScroll: 1,
@@ -236,7 +216,6 @@ $(document).ready(function () {
             focusOnSelect: true,
             prevArrow: '<div type="button" class="modal-slick-arrow modal-slick-arrow--left"><i class="fa fa-angle-left" aria-hidden="true"></i></div>',
             nextArrow: '<div type="button" class="modal-slick-arrow modal-slick-arrow--right"><i class="fa fa-angle-right" aria-hidden="true"></i></div>',
-
             responsive: [
                 {
                     breakpoint: 768,
@@ -246,6 +225,7 @@ $(document).ready(function () {
                 },
             ]
         });
+        $('#constructor-modal').modal('show');
     });
 
     $('.js-add-to-cart').on('click', function (event) {
@@ -262,6 +242,11 @@ $(document).ready(function () {
         }
 
         $('#constructor-modal').modal('hide');
+
+        $('.js-cart-btn').css('display', 'block');
+        window.setTimeout(function () {
+            $('.js-cart-btn').css('opacity', '1');
+        }, 500);
     });
 
     $('.js-cart-btn').on('click', function () {
@@ -269,11 +254,20 @@ $(document).ready(function () {
     });
 
     $('#cart-modal').on({
-        'hidden.bs.modal': function() {
-            $('.js-cart-btn').css({'display': 'block'});
+        'hidden.bs.modal': function () {
+            if (app.total_count > 0) {
+                $('.js-cart-btn').css('display', 'block');
+                window.setTimeout(function () {
+                    $('.js-cart-btn').css('opacity', '1');
+                }, 500);
+            }
         },
-        'show.bs.modal': function() {
-            $('.js-cart-btn').css({'display': 'none'});
+        'shown.bs.modal': function () {
+            $('.js-cart-btn').css('opacity', '0');
+            window.setTimeout(function () {
+                $('.js-cart-btn').css('display', 'none');
+            }, 600);
         }
     });
-});
+})
+;

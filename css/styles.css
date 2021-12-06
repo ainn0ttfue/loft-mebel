@@ -19,7 +19,7 @@ body {
     border-radius: 100%;
     border: 1px solid #fff;
     box-shadow: 0 0 10px 0 rgb(0 0 0 / 50%);
-    transition: .3s;
+    transition: .6s;
 }
 
 .cart-btn:hover {
@@ -352,6 +352,11 @@ body {
     top: 0;
 }
 
+.constructor-item-preloader {
+    max-width: 300px;
+    width: 100%;
+}
+
 .modal-constructor-mini .modal-constructor__item {
     cursor: pointer;
     padding: 3px;
@@ -634,6 +639,14 @@ body {
 
     .modal-slick-arrow--right {
         right: -10px;
+    }
+
+    .selected-list__info {
+        width: auto;
+    }
+
+    .selected-list__actions {
+        width: 60%;
     }
 }
 
