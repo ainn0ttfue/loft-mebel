@@ -95,10 +95,17 @@ $(document).ready(function () {
         methods: {
             toggleNavbar() {
                 this.is_open = !this.is_open;
+            },
+            updateIsMobile() {
+                this.is_mobile = isMobile();
             }
 
         }
     });
+
+    window.onresize = function () {
+        navbarApp.updateIsMobile();
+    };
 
     app.update_total_info();
     $('#navbar a').on('click', function () {
@@ -197,11 +204,11 @@ $(document).ready(function () {
     $('.js-section-btn').on('click', function () {
         if (!isMobile()) {
             $('html, body').animate({
-                scrollTop: $('#constructor-types').offset().top
+                scrollTop: $('#constructor-types').offset().top - 80
             }, 1000);
         } else {
             $('html, body').animate({
-                scrollTop: $('#constructor-items').offset().top
+                scrollTop: $('#constructor-items').offset().top - 80
             }, 1000);
         }
     });
@@ -330,9 +337,4 @@ $(document).ready(function () {
         }
     });
     /* ----- Owl slider END ----- */
-
-    $('body').on('wheel', function (event) {
-        // console.log(event.originalEvent.wheelDelta);
-        console.log('test')
-    });
 });

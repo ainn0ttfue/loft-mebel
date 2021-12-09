@@ -1,9 +1,9 @@
+<? if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die(); ?>
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <title>Лофт мебель</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <? $APPLICATION->ShowHead(); ?>
+  <title><? $APPLICATION->ShowTitle() ?></title>
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,27 +11,30 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
 
   <!-- Fontawesome CSS -->
-  <link rel="stylesheet" href="css/lib/fontawesome/css/font-awesome.min.css">
+  <? $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . "/css/lib/fontawesome/css/font-awesome.min.css"); ?>
 
   <!-- Bootstrap -->
-  <link rel="stylesheet" href="css/lib/bootstrap-4/bootstrap.min.css">
+  <? $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . "/css/lib/bootstrap-4/bootstrap.min.css"); ?>
 
   <!-- Owl Slider -->
-  <link rel="stylesheet" href="css/lib/owl-slider/owl.carousel.min.css">
-  <link rel="stylesheet" href="css/lib/owl-slider/owl.theme.default.min.css">
+  <? $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . "/css/lib/owl-slider/owl.carousel.min.css"); ?>
+  <? $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . "/css/lib/owl-slider/owl.theme.default.min.css"); ?>
 
   <!-- Slick Slider -->
-  <link rel="stylesheet" href="css/lib/slick-slider/slick.css">
-  <link rel="stylesheet" href="css/lib/slick-slider/slick-theme.css">
+  <? $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . "/css/lib/slick-slider/slick.css"); ?>
+  <? $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . "/css/lib/slick-slider/slick-theme.css"); ?>
 
   <!-- Slick Slider -->
-  <link rel="stylesheet" href="css/lib/jquery.fancybox.min.css">
+  <? $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . "/css/lib/jquery.fancybox.min.css"); ?>
 
   <!-- Main CSS -->
-  <link rel="stylesheet" href="css/styles.css">
+  <? $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . "/css/styles.css"); ?>
 </head>
 
 <body>
+<div id="panel">
+  <? $APPLICATION->ShowPanel(); ?>
+</div>
 
 <!-- Fixed Navbar-->
 <nav class="nav fixed-top" id="navbar">
@@ -41,7 +44,7 @@
         <div class="navbar-btn d-inline-block d-md-none" v-on:click="toggleNavbar">
           <i class="fa fa-bars" aria-hidden="true"></i>
         </div>
-        <a href="#header"><img src="img/logo.png" alt="Логотип" class="nav__logo"></a>
+        <a href="#header"><img src="<?= SITE_TEMPLATE_PATH ?>/img/logo.png" alt="Логотип" class="nav__logo"></a>
         <a href="#header" class="navbar-btn d-inline-block d-md-none">
           <i class="fa fa-home" aria-hidden="true"></i>
         </a>
@@ -71,7 +74,7 @@
 
 <!-- Header -->
 <header id="header" class="header text-center jarallax" data-jarallax data-speed="0.2">
-  <img src="img/bg/1.jpg" alt="Столяр" class="jarallax-img">
+  <img src="<?= SITE_TEMPLATE_PATH ?>/img/bg/1.jpg" alt="Столяр" class="jarallax-img">
 
   <div class="container">
     <div class="row">
@@ -130,7 +133,7 @@
 
         <div class="table-sequence d-flex flex-column flex-md-row justify-content-around align-items-center">
           <div class="table-sequence__item">
-            <img src="img/icons/1_1.png" alt="Столешница" class="table-sequence__img">
+            <img src="<?= SITE_TEMPLATE_PATH ?>/img/icons/1_1.png" alt="Столешница" class="table-sequence__img">
             <p class="table-sequence__text">Выберите столешницу</p>
           </div>
 
@@ -142,7 +145,7 @@
           </div>
 
           <div class="table-sequence__item">
-            <img src="img/icons/1_2.png" alt="Подстолье" class="table-sequence__img">
+            <img src="<?= SITE_TEMPLATE_PATH ?>/img/icons/1_2.png" alt="Подстолье" class="table-sequence__img">
             <p class="table-sequence__text">Выбрать подстолье</p>
           </div>
 
@@ -154,7 +157,7 @@
           </div>
 
           <div class="table-sequence__item">
-            <img src="img/icons/1_3.png" alt="Аксессуар" class="table-sequence__img">
+            <img src="<?= SITE_TEMPLATE_PATH ?>/img/icons/1_3.png" alt="Аксессуар" class="table-sequence__img">
             <p class="table-sequence__text">Добавить аксессуары</p>
           </div>
         </div>
@@ -182,73 +185,82 @@
           </button>
           <div class="row">
             <div class="col-md-6 text-center">
-              <img src="img/loading.gif" alt="preloader" class="constructor-item-preloader">
+              <img src="<?= SITE_TEMPLATE_PATH ?>/img/loading.gif" alt="preloader" class="constructor-item-preloader">
               <div class="modal-constructor__wrapper" style="display: none">
                 <div class="modal-constructor js-modal-slick">
                   <div class="modal-constructor__item">
-                    <a href="img/temp/1.png" data-fancybox="images">
-                      <img src="img/temp/1.png" alt="" class="modal-constructor__img">
+                    <a href="<?= SITE_TEMPLATE_PATH ?>/img/temp/1.png" data-fancybox="images">
+                      <img src="<?= SITE_TEMPLATE_PATH ?>/img/temp/1.png" alt="" class="modal-constructor__img">
                     </a>
                   </div>
                   <div class="modal-constructor__item">
-                    <a href="img/temp/2.png" data-fancybox="images">
-                      <img src="img/temp/2.png" alt="" class="modal-constructor__img">
+                    <a href="<?= SITE_TEMPLATE_PATH ?>/img/temp/2.png" data-fancybox="images">
+                      <img src="<?= SITE_TEMPLATE_PATH ?>/img/temp/2.png" alt="" class="modal-constructor__img">
                     </a>
                   </div>
                   <div class="modal-constructor__item">
-                    <a href="img/temp/3.jpg" data-fancybox="images">
-                      <img src="img/temp/3.jpg" alt="" class="modal-constructor__img">
+                    <a href="<?= SITE_TEMPLATE_PATH ?>/img/temp/3.jpg" data-fancybox="images">
+                      <img src="<?= SITE_TEMPLATE_PATH ?>/img/temp/3.jpg" alt="" class="modal-constructor__img">
                     </a>
                   </div>
                   <div class="modal-constructor__item">
-                    <a href="img/temp/1.png" data-fancybox="images">
-                      <img src="img/temp/1.png" alt="" class="modal-constructor__img">
+                    <a href="<?= SITE_TEMPLATE_PATH ?>/img/temp/1.png" data-fancybox="images">
+                      <img src="<?= SITE_TEMPLATE_PATH ?>/img/temp/1.png" alt="" class="modal-constructor__img">
                     </a>
                   </div>
                   <div class="modal-constructor__item">
-                    <a href="img/temp/2.png" data-fancybox="images">
-                      <img src="img/temp/2.png" alt="" class="modal-constructor__img">
+                    <a href="<?= SITE_TEMPLATE_PATH ?>/img/temp/2.png" data-fancybox="images">
+                      <img src="<?= SITE_TEMPLATE_PATH ?>/img/temp/2.png" alt="" class="modal-constructor__img">
                     </a>
                   </div>
                   <div class="modal-constructor__item">
-                    <a href="img/temp/3.jpg" data-fancybox="images">
-                      <img src="img/temp/3.jpg" alt="" class="modal-constructor__img">
+                    <a href="<?= SITE_TEMPLATE_PATH ?>/img/temp/3.jpg" data-fancybox="images">
+                      <img src="<?= SITE_TEMPLATE_PATH ?>/img/temp/3.jpg" alt="" class="modal-constructor__img">
                     </a>
                   </div>
                   <div class="modal-constructor__item">
-                    <a href="img/temp/1.png" data-fancybox="images">
-                      <img src="img/temp/1.png" alt="" class="modal-constructor__img">
+                    <a href="<?= SITE_TEMPLATE_PATH ?>/img/temp/1.png" data-fancybox="images">
+                      <img src="<?= SITE_TEMPLATE_PATH ?>/img/temp/1.png" alt="" class="modal-constructor__img">
                     </a>
                   </div>
                   <div class="modal-constructor__item">
-                    <a href="img/temp/2.png" data-fancybox="images">
-                      <img src="img/temp/2.png" alt="" class="modal-constructor__img">
+                    <a href="<?= SITE_TEMPLATE_PATH ?>/img/temp/2.png" data-fancybox="images">
+                      <img src="<?= SITE_TEMPLATE_PATH ?>/img/temp/2.png" alt="" class="modal-constructor__img">
                     </a>
                   </div>
                   <div class="modal-constructor__item">
-                    <a href="img/temp/3.jpg" data-fancybox="images">
-                      <img src="img/temp/3.jpg" alt="" class="modal-constructor__img">
+                    <a href="<?= SITE_TEMPLATE_PATH ?>/img/temp/3.jpg" data-fancybox="images">
+                      <img src="<?= SITE_TEMPLATE_PATH ?>/img/temp/3.jpg" alt="" class="modal-constructor__img">
                     </a>
                   </div>
                 </div>
                 <div class="modal-constructor modal-constructor-mini js-modal-slick-mini">
-                  <div class="modal-constructor__item"><img src="img/temp/1.png" alt="" class="modal-constructor__img">
+                  <div class="modal-constructor__item"><img src="<?= SITE_TEMPLATE_PATH ?>/img/temp/1.png" alt=""
+                                                            class="modal-constructor__img">
                   </div>
-                  <div class="modal-constructor__item"><img src="img/temp/2.png" alt="" class="modal-constructor__img">
+                  <div class="modal-constructor__item"><img src="<?= SITE_TEMPLATE_PATH ?>/img/temp/2.png" alt=""
+                                                            class="modal-constructor__img">
                   </div>
-                  <div class="modal-constructor__item"><img src="img/temp/3.jpg" alt="" class="modal-constructor__img">
+                  <div class="modal-constructor__item"><img src="<?= SITE_TEMPLATE_PATH ?>/img/temp/3.jpg" alt=""
+                                                            class="modal-constructor__img">
                   </div>
-                  <div class="modal-constructor__item"><img src="img/temp/1.png" alt="" class="modal-constructor__img">
+                  <div class="modal-constructor__item"><img src="<?= SITE_TEMPLATE_PATH ?>/img/temp/1.png" alt=""
+                                                            class="modal-constructor__img">
                   </div>
-                  <div class="modal-constructor__item"><img src="img/temp/2.png" alt="" class="modal-constructor__img">
+                  <div class="modal-constructor__item"><img src="<?= SITE_TEMPLATE_PATH ?>/img/temp/2.png" alt=""
+                                                            class="modal-constructor__img">
                   </div>
-                  <div class="modal-constructor__item"><img src="img/temp/3.jpg" alt="" class="modal-constructor__img">
+                  <div class="modal-constructor__item"><img src="<?= SITE_TEMPLATE_PATH ?>/img/temp/3.jpg" alt=""
+                                                            class="modal-constructor__img">
                   </div>
-                  <div class="modal-constructor__item"><img src="img/temp/1.png" alt="" class="modal-constructor__img">
+                  <div class="modal-constructor__item"><img src="<?= SITE_TEMPLATE_PATH ?>/img/temp/1.png" alt=""
+                                                            class="modal-constructor__img">
                   </div>
-                  <div class="modal-constructor__item"><img src="img/temp/2.png" alt="" class="modal-constructor__img">
+                  <div class="modal-constructor__item"><img src="<?= SITE_TEMPLATE_PATH ?>/img/temp/2.png" alt=""
+                                                            class="modal-constructor__img">
                   </div>
-                  <div class="modal-constructor__item"><img src="img/temp/3.jpg" alt="" class="modal-constructor__img">
+                  <div class="modal-constructor__item"><img src="<?= SITE_TEMPLATE_PATH ?>/img/temp/3.jpg" alt=""
+                                                            class="modal-constructor__img">
                   </div>
                 </div>
               </div>
@@ -265,7 +277,7 @@
                 <input name="title" value="Супер столешница" type="hidden">
                 <input name="price" value="999" type="hidden">
                 <input name="count" value="1" type="hidden">
-                <input name="img" value="img/temp/3.jpg" type="hidden">
+                <input name="img" value="<?= SITE_TEMPLATE_PATH ?>/img/temp/3.jpg" type="hidden">
                 <button class="button--dark button js-add-to-cart" type="button">Выбрать</button>
               </form>
 
@@ -343,26 +355,26 @@
       </div>
     </div>
 
-    <div class="constructor-types">
+    <div class="constructor-types" id="constructor-types">
       <div class="container-fluid px-0">
         <div class="row no-gutters overflow-hidden">
           <div class="col-md-4">
             <a class="constructor-types__item js-type-1 js-section-btn"
-               style="background-image: url('img/constructor/1.jpg')">
+               style="background-image: url('<?= SITE_TEMPLATE_PATH ?>/img/constructor/1.jpg')">
               <p class="constructor-types__title">Столешницы</p>
             </a>
           </div>
 
           <div class="col-md-4">
             <a class="constructor-types__item js-type-2 js-section-btn"
-               style="background-image: url('img/constructor/2.jpg')">
+               style="background-image: url('<?= SITE_TEMPLATE_PATH ?>/img/constructor/2.jpg')">
               <p class="constructor-types__title">Стальное подстолье</p>
             </a>
           </div>
 
           <div class="col-md-4">
             <a class="constructor-types__item js-type-3 js-section-btn"
-               style="background-image: url('img/constructor/3.jpg')">
+               style="background-image: url('<?= SITE_TEMPLATE_PATH ?>/img/constructor/3.jpg')">
               <p class="constructor-types__title">Аксессуары</p>
             </a>
           </div>
@@ -373,7 +385,7 @@
     <div class="constructor" id="constructor-items">
       <div class="constructor__list-1 constructor-carousel owl-carousel owl-theme">
         <div class="constructor__item js-constructor__item">
-          <img src="img/temp/1.png" alt="" class="constructor__img">
+          <img src="<?= SITE_TEMPLATE_PATH ?>/img/temp/1.png" alt="" class="constructor__img">
           <p class="constructor__title">
             Столешница с прямоугольным вырезом (бесцветная)
           </p>
@@ -385,7 +397,7 @@
           </p>
         </div>
         <div class="constructor__item js-constructor__item">
-          <img src="img/temp/1.png" alt="" class="constructor__img">
+          <img src="<?= SITE_TEMPLATE_PATH ?>/img/temp/1.png" alt="" class="constructor__img">
           <p class="constructor__title">
             Столешница с прямоугольным вырезом (бесцветная)
           </p>
@@ -397,7 +409,7 @@
           </p>
         </div>
         <div class="constructor__item js-constructor__item">
-          <img src="img/temp/1.png" alt="" class="constructor__img">
+          <img src="<?= SITE_TEMPLATE_PATH ?>/img/temp/1.png" alt="" class="constructor__img">
           <p class="constructor__title">
             Столешница с прямоугольным вырезом (бесцветная)
           </p>
@@ -409,7 +421,7 @@
           </p>
         </div>
         <div class="constructor__item js-constructor__item">
-          <img src="img/temp/1.png" alt="" class="constructor__img">
+          <img src="<?= SITE_TEMPLATE_PATH ?>/img/temp/1.png" alt="" class="constructor__img">
           <p class="constructor__title">
             Столешница с прямоугольным вырезом (бесцветная)
           </p>
@@ -421,7 +433,7 @@
           </p>
         </div>
         <div class="constructor__item js-constructor__item">
-          <img src="img/temp/1.png" alt="" class="constructor__img">
+          <img src="<?= SITE_TEMPLATE_PATH ?>/img/temp/1.png" alt="" class="constructor__img">
           <p class="constructor__title">
             Столешница с прямоугольным вырезом (бесцветная)
           </p>
@@ -433,7 +445,7 @@
           </p>
         </div>
         <div class="constructor__item js-constructor__item">
-          <img src="img/temp/1.png" alt="" class="constructor__img">
+          <img src="<?= SITE_TEMPLATE_PATH ?>/img/temp/1.png" alt="" class="constructor__img">
           <p class="constructor__title">
             Столешница с прямоугольным вырезом (бесцветная)
           </p>
@@ -447,7 +459,7 @@
       </div>
       <div class="constructor__list-2 constructor-carousel owl-carousel owl-theme">
         <div class="constructor__item js-constructor__item">
-          <img src="img/temp/2.png" alt="" class="constructor__img">
+          <img src="<?= SITE_TEMPLATE_PATH ?>/img/temp/2.png" alt="" class="constructor__img">
           <p class="constructor__title">
             Столешница с прямоугольным вырезом (бесцветная)
           </p>
@@ -459,7 +471,7 @@
           </p>
         </div>
         <div class="constructor__item js-constructor__item">
-          <img src="img/temp/2.png" alt="" class="constructor__img">
+          <img src="<?= SITE_TEMPLATE_PATH ?>/img/temp/2.png" alt="" class="constructor__img">
           <p class="constructor__title">
             Столешница с прямоугольным вырезом (бесцветная)
           </p>
@@ -471,7 +483,7 @@
           </p>
         </div>
         <div class="constructor__item js-constructor__item">
-          <img src="img/temp/2.png" alt="" class="constructor__img">
+          <img src="<?= SITE_TEMPLATE_PATH ?>/img/temp/2.png" alt="" class="constructor__img">
           <p class="constructor__title">
             Столешница с прямоугольным вырезом (бесцветная)
           </p>
@@ -483,7 +495,7 @@
           </p>
         </div>
         <div class="constructor__item js-constructor__item">
-          <img src="img/temp/2.png" alt="" class="constructor__img">
+          <img src="<?= SITE_TEMPLATE_PATH ?>/img/temp/2.png" alt="" class="constructor__img">
           <p class="constructor__title">
             Столешница с прямоугольным вырезом (бесцветная)
           </p>
@@ -495,7 +507,7 @@
           </p>
         </div>
         <div class="constructor__item js-constructor__item">
-          <img src="img/temp/2.png" alt="" class="constructor__img">
+          <img src="<?= SITE_TEMPLATE_PATH ?>/img/temp/2.png" alt="" class="constructor__img">
           <p class="constructor__title">
             Столешница с прямоугольным вырезом (бесцветная)
           </p>
@@ -507,7 +519,7 @@
           </p>
         </div>
         <div class="constructor__item js-constructor__item">
-          <img src="img/temp/2.png" alt="" class="constructor__img">
+          <img src="<?= SITE_TEMPLATE_PATH ?>/img/temp/2.png" alt="" class="constructor__img">
           <p class="constructor__title">
             Столешница с прямоугольным вырезом (бесцветная)
           </p>
@@ -521,7 +533,7 @@
       </div>
       <div class="constructor__list-3 constructor-carousel owl-carousel owl-theme">
         <div class="constructor__item js-constructor__item">
-          <img src="img/temp/3.jpg" alt="" class="constructor__img">
+          <img src="<?= SITE_TEMPLATE_PATH ?>/img/temp/3.jpg" alt="" class="constructor__img">
           <p class="constructor__title">
             Столешница с прямоугольным вырезом (бесцветная)
           </p>
@@ -533,7 +545,7 @@
           </p>
         </div>
         <div class="constructor__item js-constructor__item">
-          <img src="img/temp/3.jpg" alt="" class="constructor__img">
+          <img src="<?= SITE_TEMPLATE_PATH ?>/img/temp/3.jpg" alt="" class="constructor__img">
           <p class="constructor__title">
             Столешница с прямоугольным вырезом (бесцветная)
           </p>
@@ -545,7 +557,7 @@
           </p>
         </div>
         <div class="constructor__item js-constructor__item">
-          <img src="img/temp/3.jpg" alt="" class="constructor__img">
+          <img src="<?= SITE_TEMPLATE_PATH ?>/img/temp/3.jpg" alt="" class="constructor__img">
           <p class="constructor__title">
             Столешница с прямоугольным вырезом (бесцветная)
           </p>
@@ -557,7 +569,7 @@
           </p>
         </div>
         <div class="constructor__item js-constructor__item">
-          <img src="img/temp/3.jpg" alt="" class="constructor__img">
+          <img src="<?= SITE_TEMPLATE_PATH ?>/img/temp/3.jpg" alt="" class="constructor__img">
           <p class="constructor__title">
             Столешница с прямоугольным вырезом (бесцветная)
           </p>
@@ -569,7 +581,7 @@
           </p>
         </div>
         <div class="constructor__item js-constructor__item">
-          <img src="img/temp/3.jpg" alt="" class="constructor__img">
+          <img src="<?= SITE_TEMPLATE_PATH ?>/img/temp/3.jpg" alt="" class="constructor__img">
           <p class="constructor__title">
             Столешница с прямоугольным вырезом (бесцветная)
           </p>
@@ -581,7 +593,7 @@
           </p>
         </div>
         <div class="constructor__item js-constructor__item">
-          <img src="img/temp/3.jpg" alt="" class="constructor__img">
+          <img src="<?= SITE_TEMPLATE_PATH ?>/img/temp/3.jpg" alt="" class="constructor__img">
           <p class="constructor__title">
             Столешница с прямоугольным вырезом (бесцветная)
           </p>
@@ -593,7 +605,7 @@
           </p>
         </div>
         <div class="constructor__item js-constructor__item">
-          <img src="img/temp/3.jpg" alt="" class="constructor__img">
+          <img src="<?= SITE_TEMPLATE_PATH ?>/img/temp/3.jpg" alt="" class="constructor__img">
           <p class="constructor__title">
             Столешница с прямоугольным вырезом (бесцветная)
           </p>
@@ -657,7 +669,8 @@
 
         <div class="table-sequence d-flex flex-column flex-md-row justify-content-around">
           <div class="table-sequence__item">
-            <img src="img/icons/2_1.svg" alt="Материалы" class="table-sequence__img table-sequence__img--small">
+            <img src="<?= SITE_TEMPLATE_PATH ?>/img/icons/2_1.svg" alt="Материалы"
+                 class="table-sequence__img table-sequence__img--small">
             <p class="table-sequence__title">Материалы</p>
             <p class="table-sequence__text">
               Для наших столов мы используем только натуральную древесину
@@ -665,7 +678,8 @@
           </div>
 
           <div class="table-sequence__item">
-            <img src="img/icons/2_2.svg" alt="Дизайн" class="table-sequence__img table-sequence__img--small">
+            <img src="<?= SITE_TEMPLATE_PATH ?>/img/icons/2_2.svg" alt="Дизайн"
+                 class="table-sequence__img table-sequence__img--small">
             <p class="table-sequence__title">Дизайн</p>
             <p class="table-sequence__text">
               Мы предлагаем стильную и комфортную мебель для повседневной работы дома и в офисе
@@ -673,7 +687,8 @@
           </div>
 
           <div class="table-sequence__item">
-            <img src="img/icons/2_3.svg" alt="Качество" class="table-sequence__img table-sequence__img--small">
+            <img src="<?= SITE_TEMPLATE_PATH ?>/img/icons/2_3.svg" alt="Качество"
+                 class="table-sequence__img table-sequence__img--small">
             <p class="table-sequence__title">Качество</p>
             <p class="table-sequence__text">
               Все наши продукты созданы вручную и делаются с вниманием и любовью
@@ -700,42 +715,42 @@
         <div class="partners js-partners-carousel owl-carousel">
           <div class="partners__item" title="Зеркало Ирк - Изготовление Зеркал">
             <a href="https://zerkalo-irk.ru/" target="_blank">
-              <img src="img/partners/zerkalo.png" alt="Зеркало Ирк Логотип">
+              <img src="<?= SITE_TEMPLATE_PATH ?>/img/partners/zerkalo.png" alt="Зеркало Ирк Логотип">
             </a>
           </div>
           <div class="partners__item" title="Зеркало Ирк - Изготовление Зеркал">
             <a href="https://grim-irk.ru/" target="_blank">
-              <img src="img/partners/grim.png" alt="Грим Ирк Логотип">
+              <img src="<?= SITE_TEMPLATE_PATH ?>/img/partners/grim.png" alt="Грим Ирк Логотип">
             </a>
           </div>
           <div class="partners__item" title="Алита - Изготовление мебели для торговых помещений">
             <a href="https://alita-mebel.ru/" target="_blank">
-              <img src="img/partners/alita.png" alt="Алита Логотип">
+              <img src="<?= SITE_TEMPLATE_PATH ?>/img/partners/alita.png" alt="Алита Логотип">
             </a>
           </div>
           <div class="partners__item" title="Айронвуд - Изготовление встраиваемой мебели">
             <a href="https://айронвуд.рф/" target="_blank">
-              <img src="img/partners/ironwood.png" alt="Айронвуд Логотип">
+              <img src="<?= SITE_TEMPLATE_PATH ?>/img/partners/ironwood.png" alt="Айронвуд Логотип">
             </a>
           </div>
           <div class="partners__item" title="Зеркало Ирк - Изготовление встраемых кухонь и шкафов">
             <a href="https://мебель-стайл.рф/" target="_blank">
-              <img src="img/partners/mebel-style.png" alt="Мебель стайл Логотип">
+              <img src="<?= SITE_TEMPLATE_PATH ?>/img/partners/mebel-style.png" alt="Мебель стайл Логотип">
             </a>
           </div>
           <div class="partners__item" title="Аврора- Изготовление встраиваемой и корпуской мебели ">
             <a href="https://aurora-irk.ru/" target="_blank">
-              <img src="img/partners/aurora.png" alt="Аврора Логотип">
+              <img src="<?= SITE_TEMPLATE_PATH ?>/img/partners/aurora.png" alt="Аврора Логотип">
             </a>
           </div>
           <div class="partners__item" title="Loft Mebel - интернет магазин лофт мебели">
             <a href="https://loft-mebel.shop/" target="_blank">
-              <img src="img/partners/loft-mebel.png" alt="Лофт Мебель Логотип">
+              <img src="<?= SITE_TEMPLATE_PATH ?>/img/partners/loft-mebel.png" alt="Лофт Мебель Логотип">
             </a>
           </div>
           <div class="partners__item" title="Лофт Мебель - магазин лофт мебели">
             <a href="https://loft-mebel.store/" target="_blank">
-              <img src="img/partners/loft-mebel.store.png" alt="Лофт Мебель Логотип">
+              <img src="<?= SITE_TEMPLATE_PATH ?>/img/partners/loft-mebel.store.png" alt="Лофт Мебель Логотип">
             </a>
           </div>
         </div>
@@ -757,15 +772,15 @@
         <a href="https://www.instagram.com/aurora_mebel.irk/" class="d-block" target="_blank">
           <div class="embedsocial-hashtag" data-ref="7a4e308a251638060715c3444b32defa98814146"></div>
           <script>(function (d, s, id) {
-              var js;
-              if (d.getElementById(id)) {
-                  return;
-              }
-              js = d.createElement(s);
-              js.id = id;
-              js.src = "https://embedsocial.com/cdn/ht.js";
-              d.getElementsByTagName("head")[0].appendChild(js);
-          }(document, "script", "EmbedSocialHashtagScript"));</script>
+                  var js;
+                  if (d.getElementById(id)) {
+                      return;
+                  }
+                  js = d.createElement(s);
+                  js.id = id;
+                  js.src = "https://embedsocial.com/cdn/ht.js";
+                  d.getElementsByTagName("head")[0].appendChild(js);
+              }(document, "script", "EmbedSocialHashtagScript"));</script>
         </a>
       </div>
     </div>
@@ -793,7 +808,7 @@
             Найти проезд до ГРИМ, мастерская по изготовлению гримерных и парящих зеркал
           </a>
         </div>
-        <script charset="utf-8" src="js/lib/DGWidgetLoader.js"></script>
+        <script charset="utf-8" src="<?= SITE_TEMPLATE_PATH ?>/js/lib/DGWidgetLoader.js"></script>
         <script charset="utf-8">
             new DGWidgetLoader({
                 "width": "100%",
@@ -843,83 +858,3 @@
   </div>
 </section>
 
-<!-- Footer -->
-<footer class="footer" id="footer">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-3">
-        <p class="footer__title footer__title--white">
-          LOFT MEBEL
-        </p>
-        <p class="footer__text">
-          ООО "СФЕРА 360" ОГРН 1213800011237
-          Офис и склад: 664058, Иркутская область, г.Иркутск, Зеленый, д.14
-        </p>
-
-        <p class="footer__text">
-          © Copyright LOFT-MEBEL, 2021 / все права защищены. Полное или частичное копирование запрещено.
-        </p>
-      </div>
-
-      <div class="col-lg-3">
-        <p class="footer__title">
-          НАВИГАЦИЯ
-        </p>
-
-        <ul class="footer__list">
-          <li><a href="#header" class="link">Главная</a></li>
-          <li><a href="#constructor" class="link">Конструктор</a></li>
-          <li><a href="#partners" class="link">Партнеры</a></li>
-          <li><a href="#instagram" class="link">Мы в Instagram</a></li>
-          <li><a href="#contacts" class="link">Контакты</a></li>
-        </ul>
-      </div>
-
-      <div class="col-lg-3">
-        <p class="footer__title">
-          НАШИ ТОВАРЫ
-        </p>
-
-        <ul class="footer__list">
-          <li><a href="#constructor" class="link">Столешницы</a></li>
-          <li><a href="#constructor" class="link">Подстолья</a></li>
-          <li><a href="#constructor" class="link">Аксессуары</a></li>
-        </ul>
-      </div>
-
-      <div class="col-lg-3">
-        <p class="footer__title">
-          КОНТАКТЫ
-        </p>
-
-        <ul class="footer__list">
-          <li><a href="tel:89140003787" class="link">+7 (914) 000-37-87</a></li>
-          <li><a href="tel:89149120101" class="link">+7 (914) 912-01-01</a></li>
-          <li><a href="mailto:sale@loft-mebel.shop" class="link">sale@loft-mebel.shop</a></li>
-          <li><a href="mailto:aurora-irk@yandex.ru" class="link">aurora-irk@yandex.ru</a></li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</footer>
-
-<!-- Load JQuery -->
-<script src="js/lib/jquery-3.2.1.min.js"></script>
-
-<!-- Load JS LIBs -->
-<script src="js/lib/owl.carousel.min.js"></script>
-<script src="js/lib/slick.min.js"></script>
-<script src="js/lib/jarallax.min.js"></script>
-<script src="js/lib/jquery.fancybox.min.js"></script>
-
-<!-- Load Bootstrap JS-->
-<script src="js/lib/bootstrap/bootstrap.min.js"></script>
-<script src="js/lib/bootstrap/popper.min.js"></script>
-
-<!-- Load Main JS-->
-<script src="js/main.js"></script>
-
-<!-- Load Vue.js -->
-<script src="js/lib/vue.js"></script>
-</body>
-</html>

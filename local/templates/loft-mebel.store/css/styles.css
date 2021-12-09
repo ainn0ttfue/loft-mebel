@@ -3,8 +3,9 @@ body {
     font-family: 'Roboto', Arial, sans-serif;
 }
 
-iframe {
-    /*pointer-events:none;*/
+#panel {
+    z-index: 2000;
+    position: relative;
 }
 
 .cart-btn {

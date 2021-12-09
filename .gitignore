@@ -1,0 +1,9 @@
+*.idea
+/upload
+/bitrix
+/local/php_interface/
+/local/templates/*
+robots.txt
+*.log
+
+!/local/templates/loft-mebel.store
