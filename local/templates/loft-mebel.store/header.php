@@ -183,117 +183,7 @@
           <button type="button" class="close modal__close-btn" data-dismiss="modal">
             <span>&times;</span>
           </button>
-          <div class="row">
-            <div class="col-md-6 text-center">
-              <img src="<?= SITE_TEMPLATE_PATH ?>/img/loading.gif" alt="preloader" class="constructor-item-preloader">
-              <div class="modal-constructor__wrapper" style="display: none">
-                <div class="modal-constructor js-modal-slick">
-                  <div class="modal-constructor__item">
-                    <a href="<?= SITE_TEMPLATE_PATH ?>/img/temp/1.png" data-fancybox="images">
-                      <img src="<?= SITE_TEMPLATE_PATH ?>/img/temp/1.png" alt="" class="modal-constructor__img">
-                    </a>
-                  </div>
-                  <div class="modal-constructor__item">
-                    <a href="<?= SITE_TEMPLATE_PATH ?>/img/temp/2.png" data-fancybox="images">
-                      <img src="<?= SITE_TEMPLATE_PATH ?>/img/temp/2.png" alt="" class="modal-constructor__img">
-                    </a>
-                  </div>
-                  <div class="modal-constructor__item">
-                    <a href="<?= SITE_TEMPLATE_PATH ?>/img/temp/3.jpg" data-fancybox="images">
-                      <img src="<?= SITE_TEMPLATE_PATH ?>/img/temp/3.jpg" alt="" class="modal-constructor__img">
-                    </a>
-                  </div>
-                  <div class="modal-constructor__item">
-                    <a href="<?= SITE_TEMPLATE_PATH ?>/img/temp/1.png" data-fancybox="images">
-                      <img src="<?= SITE_TEMPLATE_PATH ?>/img/temp/1.png" alt="" class="modal-constructor__img">
-                    </a>
-                  </div>
-                  <div class="modal-constructor__item">
-                    <a href="<?= SITE_TEMPLATE_PATH ?>/img/temp/2.png" data-fancybox="images">
-                      <img src="<?= SITE_TEMPLATE_PATH ?>/img/temp/2.png" alt="" class="modal-constructor__img">
-                    </a>
-                  </div>
-                  <div class="modal-constructor__item">
-                    <a href="<?= SITE_TEMPLATE_PATH ?>/img/temp/3.jpg" data-fancybox="images">
-                      <img src="<?= SITE_TEMPLATE_PATH ?>/img/temp/3.jpg" alt="" class="modal-constructor__img">
-                    </a>
-                  </div>
-                  <div class="modal-constructor__item">
-                    <a href="<?= SITE_TEMPLATE_PATH ?>/img/temp/1.png" data-fancybox="images">
-                      <img src="<?= SITE_TEMPLATE_PATH ?>/img/temp/1.png" alt="" class="modal-constructor__img">
-                    </a>
-                  </div>
-                  <div class="modal-constructor__item">
-                    <a href="<?= SITE_TEMPLATE_PATH ?>/img/temp/2.png" data-fancybox="images">
-                      <img src="<?= SITE_TEMPLATE_PATH ?>/img/temp/2.png" alt="" class="modal-constructor__img">
-                    </a>
-                  </div>
-                  <div class="modal-constructor__item">
-                    <a href="<?= SITE_TEMPLATE_PATH ?>/img/temp/3.jpg" data-fancybox="images">
-                      <img src="<?= SITE_TEMPLATE_PATH ?>/img/temp/3.jpg" alt="" class="modal-constructor__img">
-                    </a>
-                  </div>
-                </div>
-                <div class="modal-constructor modal-constructor-mini js-modal-slick-mini">
-                  <div class="modal-constructor__item"><img src="<?= SITE_TEMPLATE_PATH ?>/img/temp/1.png" alt=""
-                                                            class="modal-constructor__img">
-                  </div>
-                  <div class="modal-constructor__item"><img src="<?= SITE_TEMPLATE_PATH ?>/img/temp/2.png" alt=""
-                                                            class="modal-constructor__img">
-                  </div>
-                  <div class="modal-constructor__item"><img src="<?= SITE_TEMPLATE_PATH ?>/img/temp/3.jpg" alt=""
-                                                            class="modal-constructor__img">
-                  </div>
-                  <div class="modal-constructor__item"><img src="<?= SITE_TEMPLATE_PATH ?>/img/temp/1.png" alt=""
-                                                            class="modal-constructor__img">
-                  </div>
-                  <div class="modal-constructor__item"><img src="<?= SITE_TEMPLATE_PATH ?>/img/temp/2.png" alt=""
-                                                            class="modal-constructor__img">
-                  </div>
-                  <div class="modal-constructor__item"><img src="<?= SITE_TEMPLATE_PATH ?>/img/temp/3.jpg" alt=""
-                                                            class="modal-constructor__img">
-                  </div>
-                  <div class="modal-constructor__item"><img src="<?= SITE_TEMPLATE_PATH ?>/img/temp/1.png" alt=""
-                                                            class="modal-constructor__img">
-                  </div>
-                  <div class="modal-constructor__item"><img src="<?= SITE_TEMPLATE_PATH ?>/img/temp/2.png" alt=""
-                                                            class="modal-constructor__img">
-                  </div>
-                  <div class="modal-constructor__item"><img src="<?= SITE_TEMPLATE_PATH ?>/img/temp/3.jpg" alt=""
-                                                            class="modal-constructor__img">
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-6">
-              <p class="modal__title">
-                Столешница с прямоугольным вырезом (шоколадная)
-              </p>
-              <p class="modal__price">1 990 р.</p>
-
-              <form action="">
-                <input name="id" value="123" type="hidden">
-                <input name="title" value="Супер столешница" type="hidden">
-                <input name="price" value="999" type="hidden">
-                <input name="count" value="1" type="hidden">
-                <input name="img" value="<?= SITE_TEMPLATE_PATH ?>/img/temp/3.jpg" type="hidden">
-                <button class="button--dark button js-add-to-cart" type="button">Выбрать</button>
-              </form>
-
-              <p class="modal__desc">
-                Блоки питания BSPS 12V предназначены для отдельного питания светодиодной ленты в системах внутреннего
-                освещения. Выбор блока питания для конкретного применения зависит от номинального напряжения или тока
-                работы светодиодов, общей потребляемой мощности и параметров напряжения питающей сети. Параметры
-                напряжения сети должны находиться в рабочем диапазоне. Для стабильной работы необходимо оставлять запас
-                по
-                мощности примерно в 20%. Защита от перегрузок и скачков напряжения срабатывает при перегрузке свыше 120%
-                от номинальной мощности. Автоматический перезапуск при восстановлении рабочих параметров. Защита от
-                перегрева — отключение происходит при температуре свыше 105°C. Автоматический перезапуск при
-                восстановлении рабочей температуры у блоков питания мощностью свыше 60 Вт. Перегрузки более 80–85%
-                сокращают срок службы блоков питания.
-              </p>
-            </div>
+          <div class="row js-constructor-modal-wrap">
           </div>
         </div>
       </div>
@@ -313,7 +203,7 @@
         <div class="modal-body p-3">
           <div class="selected-list d-flex flex-column" id="selected-items">
             <div class="selected-list__item d-flex flex-column flex-md-row align-items-center" v-for="product in cart">
-              <div class="selected-list__info d-flex align-items-center">
+              <div class="selected-list__info d-flex align-items-center js-cart-item" :data-id="product.id">
                 <div class="selected-list__img" v-bind:style="{'background-image': 'url(' + product.img + ')'}"></div>
                 <p class="selected-list__title">
                   {{ product.title }}
@@ -357,266 +247,225 @@
 
     <div class="constructor-types" id="constructor-types">
       <div class="container-fluid px-0">
-        <div class="row no-gutters overflow-hidden">
-          <div class="col-md-4">
-            <a class="constructor-types__item js-type-1 js-section-btn"
-               style="background-image: url('<?= SITE_TEMPLATE_PATH ?>/img/constructor/1.jpg')">
-              <p class="constructor-types__title">Столешницы</p>
-            </a>
-          </div>
-
-          <div class="col-md-4">
-            <a class="constructor-types__item js-type-2 js-section-btn"
-               style="background-image: url('<?= SITE_TEMPLATE_PATH ?>/img/constructor/2.jpg')">
-              <p class="constructor-types__title">Стальное подстолье</p>
-            </a>
-          </div>
-
-          <div class="col-md-4">
-            <a class="constructor-types__item js-type-3 js-section-btn"
-               style="background-image: url('<?= SITE_TEMPLATE_PATH ?>/img/constructor/3.jpg')">
-              <p class="constructor-types__title">Аксессуары</p>
-            </a>
-          </div>
-        </div>
+        <? $APPLICATION->IncludeComponent(
+          "bitrix:catalog.section.list",
+          "sections-menu",
+          array(
+            "ADD_SECTIONS_CHAIN" => "N",
+            "CACHE_FILTER" => "N",
+            "CACHE_GROUPS" => "N",
+            "CACHE_TIME" => "36000000",
+            "CACHE_TYPE" => "A",
+            "COUNT_ELEMENTS" => "N",
+            "COUNT_ELEMENTS_FILTER" => "CNT_ACTIVE",
+            "FILTER_NAME" => "",
+            "IBLOCK_ID" => "20",
+            "IBLOCK_TYPE" => "products",
+            "SECTION_CODE" => "",
+            "SECTION_FIELDS" => array(
+              0 => "",
+              1 => "",
+            ),
+            "SECTION_ID" => "",
+            "SECTION_URL" => "",
+            "SECTION_USER_FIELDS" => array(
+              0 => "",
+              1 => "",
+            ),
+            "SHOW_PARENT_NAME" => "Y",
+            "TOP_DEPTH" => "1",
+            "VIEW_MODE" => "LINE",
+            "COMPONENT_TEMPLATE" => "sections-menu"
+          ),
+          false
+        ); ?>
       </div>
     </div>
 
     <div class="constructor" id="constructor-items">
-      <div class="constructor__list-1 constructor-carousel owl-carousel owl-theme">
-        <div class="constructor__item js-constructor__item">
-          <img src="<?= SITE_TEMPLATE_PATH ?>/img/temp/1.png" alt="" class="constructor__img">
-          <p class="constructor__title">
-            Столешница с прямоугольным вырезом (бесцветная)
-          </p>
-          <p class="constructor__desc">
-
-          </p>
-          <p class="constructor__price">
-            29 990р.
-          </p>
-        </div>
-        <div class="constructor__item js-constructor__item">
-          <img src="<?= SITE_TEMPLATE_PATH ?>/img/temp/1.png" alt="" class="constructor__img">
-          <p class="constructor__title">
-            Столешница с прямоугольным вырезом (бесцветная)
-          </p>
-          <p class="constructor__desc">
-
-          </p>
-          <p class="constructor__price">
-            29 990р.
-          </p>
-        </div>
-        <div class="constructor__item js-constructor__item">
-          <img src="<?= SITE_TEMPLATE_PATH ?>/img/temp/1.png" alt="" class="constructor__img">
-          <p class="constructor__title">
-            Столешница с прямоугольным вырезом (бесцветная)
-          </p>
-          <p class="constructor__desc">
-
-          </p>
-          <p class="constructor__price">
-            29 990р.
-          </p>
-        </div>
-        <div class="constructor__item js-constructor__item">
-          <img src="<?= SITE_TEMPLATE_PATH ?>/img/temp/1.png" alt="" class="constructor__img">
-          <p class="constructor__title">
-            Столешница с прямоугольным вырезом (бесцветная)
-          </p>
-          <p class="constructor__desc">
-
-          </p>
-          <p class="constructor__price">
-            29 990р.
-          </p>
-        </div>
-        <div class="constructor__item js-constructor__item">
-          <img src="<?= SITE_TEMPLATE_PATH ?>/img/temp/1.png" alt="" class="constructor__img">
-          <p class="constructor__title">
-            Столешница с прямоугольным вырезом (бесцветная)
-          </p>
-          <p class="constructor__desc">
-
-          </p>
-          <p class="constructor__price">
-            29 990р.
-          </p>
-        </div>
-        <div class="constructor__item js-constructor__item">
-          <img src="<?= SITE_TEMPLATE_PATH ?>/img/temp/1.png" alt="" class="constructor__img">
-          <p class="constructor__title">
-            Столешница с прямоугольным вырезом (бесцветная)
-          </p>
-          <p class="constructor__desc">
-
-          </p>
-          <p class="constructor__price">
-            29 990р.
-          </p>
-        </div>
-      </div>
-      <div class="constructor__list-2 constructor-carousel owl-carousel owl-theme">
-        <div class="constructor__item js-constructor__item">
-          <img src="<?= SITE_TEMPLATE_PATH ?>/img/temp/2.png" alt="" class="constructor__img">
-          <p class="constructor__title">
-            Столешница с прямоугольным вырезом (бесцветная)
-          </p>
-          <p class="constructor__desc">
-
-          </p>
-          <p class="constructor__price">
-            29 990р.
-          </p>
-        </div>
-        <div class="constructor__item js-constructor__item">
-          <img src="<?= SITE_TEMPLATE_PATH ?>/img/temp/2.png" alt="" class="constructor__img">
-          <p class="constructor__title">
-            Столешница с прямоугольным вырезом (бесцветная)
-          </p>
-          <p class="constructor__desc">
-
-          </p>
-          <p class="constructor__price">
-            29 990р.
-          </p>
-        </div>
-        <div class="constructor__item js-constructor__item">
-          <img src="<?= SITE_TEMPLATE_PATH ?>/img/temp/2.png" alt="" class="constructor__img">
-          <p class="constructor__title">
-            Столешница с прямоугольным вырезом (бесцветная)
-          </p>
-          <p class="constructor__desc">
-
-          </p>
-          <p class="constructor__price">
-            29 990р.
-          </p>
-        </div>
-        <div class="constructor__item js-constructor__item">
-          <img src="<?= SITE_TEMPLATE_PATH ?>/img/temp/2.png" alt="" class="constructor__img">
-          <p class="constructor__title">
-            Столешница с прямоугольным вырезом (бесцветная)
-          </p>
-          <p class="constructor__desc">
-
-          </p>
-          <p class="constructor__price">
-            29 990р.
-          </p>
-        </div>
-        <div class="constructor__item js-constructor__item">
-          <img src="<?= SITE_TEMPLATE_PATH ?>/img/temp/2.png" alt="" class="constructor__img">
-          <p class="constructor__title">
-            Столешница с прямоугольным вырезом (бесцветная)
-          </p>
-          <p class="constructor__desc">
-
-          </p>
-          <p class="constructor__price">
-            29 990р.
-          </p>
-        </div>
-        <div class="constructor__item js-constructor__item">
-          <img src="<?= SITE_TEMPLATE_PATH ?>/img/temp/2.png" alt="" class="constructor__img">
-          <p class="constructor__title">
-            Столешница с прямоугольным вырезом (бесцветная)
-          </p>
-          <p class="constructor__desc">
-
-          </p>
-          <p class="constructor__price">
-            29 990р.
-          </p>
-        </div>
-      </div>
-      <div class="constructor__list-3 constructor-carousel owl-carousel owl-theme">
-        <div class="constructor__item js-constructor__item">
-          <img src="<?= SITE_TEMPLATE_PATH ?>/img/temp/3.jpg" alt="" class="constructor__img">
-          <p class="constructor__title">
-            Столешница с прямоугольным вырезом (бесцветная)
-          </p>
-          <p class="constructor__desc">
-
-          </p>
-          <p class="constructor__price">
-            29 990р.
-          </p>
-        </div>
-        <div class="constructor__item js-constructor__item">
-          <img src="<?= SITE_TEMPLATE_PATH ?>/img/temp/3.jpg" alt="" class="constructor__img">
-          <p class="constructor__title">
-            Столешница с прямоугольным вырезом (бесцветная)
-          </p>
-          <p class="constructor__desc">
-
-          </p>
-          <p class="constructor__price">
-            29 990р.
-          </p>
-        </div>
-        <div class="constructor__item js-constructor__item">
-          <img src="<?= SITE_TEMPLATE_PATH ?>/img/temp/3.jpg" alt="" class="constructor__img">
-          <p class="constructor__title">
-            Столешница с прямоугольным вырезом (бесцветная)
-          </p>
-          <p class="constructor__desc">
-
-          </p>
-          <p class="constructor__price">
-            29 990р.
-          </p>
-        </div>
-        <div class="constructor__item js-constructor__item">
-          <img src="<?= SITE_TEMPLATE_PATH ?>/img/temp/3.jpg" alt="" class="constructor__img">
-          <p class="constructor__title">
-            Столешница с прямоугольным вырезом (бесцветная)
-          </p>
-          <p class="constructor__desc">
-
-          </p>
-          <p class="constructor__price">
-            29 990р.
-          </p>
-        </div>
-        <div class="constructor__item js-constructor__item">
-          <img src="<?= SITE_TEMPLATE_PATH ?>/img/temp/3.jpg" alt="" class="constructor__img">
-          <p class="constructor__title">
-            Столешница с прямоугольным вырезом (бесцветная)
-          </p>
-          <p class="constructor__desc">
-
-          </p>
-          <p class="constructor__price">
-            29 990р.
-          </p>
-        </div>
-        <div class="constructor__item js-constructor__item">
-          <img src="<?= SITE_TEMPLATE_PATH ?>/img/temp/3.jpg" alt="" class="constructor__img">
-          <p class="constructor__title">
-            Столешница с прямоугольным вырезом (бесцветная)
-          </p>
-          <p class="constructor__desc">
-
-          </p>
-          <p class="constructor__price">
-            29 990р.
-          </p>
-        </div>
-        <div class="constructor__item js-constructor__item">
-          <img src="<?= SITE_TEMPLATE_PATH ?>/img/temp/3.jpg" alt="" class="constructor__img">
-          <p class="constructor__title">
-            Столешница с прямоугольным вырезом (бесцветная)
-          </p>
-          <p class="constructor__desc">
-
-          </p>
-          <p class="constructor__price">
-            29 990р.
-          </p>
-        </div>
-      </div>
+      <? $APPLICATION->IncludeComponent("bitrix:news.list", "products", array(
+        "ACTIVE_DATE_FORMAT" => "d.m.Y",  // Формат показа даты
+        "ADD_SECTIONS_CHAIN" => "N",  // Включать раздел в цепочку навигации
+        "AJAX_MODE" => "N",  // Включить режим AJAX
+        "AJAX_OPTION_ADDITIONAL" => "",  // Дополнительный идентификатор
+        "AJAX_OPTION_HISTORY" => "N",  // Включить эмуляцию навигации браузера
+        "AJAX_OPTION_JUMP" => "N",  // Включить прокрутку к началу компонента
+        "AJAX_OPTION_STYLE" => "N",  // Включить подгрузку стилей
+        "CACHE_FILTER" => "N",  // Кешировать при установленном фильтре
+        "CACHE_GROUPS" => "N",  // Учитывать права доступа
+        "CACHE_TIME" => "36000000",  // Время кеширования (сек.)
+        "CACHE_TYPE" => "A",  // Тип кеширования
+        "CHECK_DATES" => "Y",  // Показывать только активные на данный момент элементы
+        "DETAIL_URL" => "",  // URL страницы детального просмотра (по умолчанию - из настроек инфоблока)
+        "DISPLAY_BOTTOM_PAGER" => "N",  // Выводить под списком
+        "DISPLAY_DATE" => "N",  // Выводить дату элемента
+        "DISPLAY_NAME" => "Y",  // Выводить название элемента
+        "DISPLAY_PICTURE" => "Y",  // Выводить изображение для анонса
+        "DISPLAY_PREVIEW_TEXT" => "Y",  // Выводить текст анонса
+        "DISPLAY_TOP_PAGER" => "N",  // Выводить над списком
+        "FIELD_CODE" => array(  // Поля
+          0 => "",
+          1 => "",
+        ),
+        "FILTER_NAME" => "",  // Фильтр
+        "HIDE_LINK_WHEN_NO_DETAIL" => "N",  // Скрывать ссылку, если нет детального описания
+        "IBLOCK_ID" => "20",  // Код информационного блока
+        "IBLOCK_TYPE" => "products",  // Тип информационного блока (используется только для проверки)
+        "INCLUDE_IBLOCK_INTO_CHAIN" => "N",  // Включать инфоблок в цепочку навигации
+        "INCLUDE_SUBSECTIONS" => "N",  // Показывать элементы подразделов раздела
+        "MESSAGE_404" => "",  // Сообщение для показа (по умолчанию из компонента)
+        "NEWS_COUNT" => "2000",  // Количество новостей на странице
+        "PAGER_BASE_LINK_ENABLE" => "N",  // Включить обработку ссылок
+        "PAGER_DESC_NUMBERING" => "N",  // Использовать обратную навигацию
+        "PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",  // Время кеширования страниц для обратной навигации
+        "PAGER_SHOW_ALL" => "N",  // Показывать ссылку "Все"
+        "PAGER_SHOW_ALWAYS" => "N",  // Выводить всегда
+        "PAGER_TEMPLATE" => ".default",  // Шаблон постраничной навигации
+        "PAGER_TITLE" => "Новости",  // Название категорий
+        "PARENT_SECTION" => "25",  // ID раздела
+        "PARENT_SECTION_CODE" => "",  // Код раздела
+        "PREVIEW_TRUNCATE_LEN" => "",  // Максимальная длина анонса для вывода (только для типа текст)
+        "PROPERTY_CODE" => array(  // Свойства
+          0 => "PRICE",
+          1 => "",
+        ),
+        "SET_BROWSER_TITLE" => "N",  // Устанавливать заголовок окна браузера
+        "SET_LAST_MODIFIED" => "N",  // Устанавливать в заголовках ответа время модификации страницы
+        "SET_META_DESCRIPTION" => "N",  // Устанавливать описание страницы
+        "SET_META_KEYWORDS" => "N",  // Устанавливать ключевые слова страницы
+        "SET_STATUS_404" => "N",  // Устанавливать статус 404
+        "SET_TITLE" => "N",  // Устанавливать заголовок страницы
+        "SHOW_404" => "N",  // Показ специальной страницы
+        "SORT_BY1" => "ACTIVE_FROM",  // Поле для первой сортировки новостей
+        "SORT_BY2" => "SORT",  // Поле для второй сортировки новостей
+        "SORT_ORDER1" => "DESC",  // Направление для первой сортировки новостей
+        "SORT_ORDER2" => "ASC",  // Направление для второй сортировки новостей
+        "STRICT_SECTION_CHECK" => "N",  // Строгая проверка раздела для показа списка
+      ),
+        false
+      ); ?>
+      <? $APPLICATION->IncludeComponent("bitrix:news.list", "products", array(
+        "ACTIVE_DATE_FORMAT" => "d.m.Y",  // Формат показа даты
+        "ADD_SECTIONS_CHAIN" => "N",  // Включать раздел в цепочку навигации
+        "AJAX_MODE" => "N",  // Включить режим AJAX
+        "AJAX_OPTION_ADDITIONAL" => "",  // Дополнительный идентификатор
+        "AJAX_OPTION_HISTORY" => "N",  // Включить эмуляцию навигации браузера
+        "AJAX_OPTION_JUMP" => "N",  // Включить прокрутку к началу компонента
+        "AJAX_OPTION_STYLE" => "N",  // Включить подгрузку стилей
+        "CACHE_FILTER" => "N",  // Кешировать при установленном фильтре
+        "CACHE_GROUPS" => "N",  // Учитывать права доступа
+        "CACHE_TIME" => "36000000",  // Время кеширования (сек.)
+        "CACHE_TYPE" => "A",  // Тип кеширования
+        "CHECK_DATES" => "Y",  // Показывать только активные на данный момент элементы
+        "DETAIL_URL" => "",  // URL страницы детального просмотра (по умолчанию - из настроек инфоблока)
+        "DISPLAY_BOTTOM_PAGER" => "N",  // Выводить под списком
+        "DISPLAY_DATE" => "N",  // Выводить дату элемента
+        "DISPLAY_NAME" => "Y",  // Выводить название элемента
+        "DISPLAY_PICTURE" => "Y",  // Выводить изображение для анонса
+        "DISPLAY_PREVIEW_TEXT" => "Y",  // Выводить текст анонса
+        "DISPLAY_TOP_PAGER" => "N",  // Выводить над списком
+        "FIELD_CODE" => array(  // Поля
+          0 => "",
+          1 => "",
+        ),
+        "FILTER_NAME" => "",  // Фильтр
+        "HIDE_LINK_WHEN_NO_DETAIL" => "N",  // Скрывать ссылку, если нет детального описания
+        "IBLOCK_ID" => "20",  // Код информационного блока
+        "IBLOCK_TYPE" => "products",  // Тип информационного блока (используется только для проверки)
+        "INCLUDE_IBLOCK_INTO_CHAIN" => "N",  // Включать инфоблок в цепочку навигации
+        "INCLUDE_SUBSECTIONS" => "N",  // Показывать элементы подразделов раздела
+        "MESSAGE_404" => "",  // Сообщение для показа (по умолчанию из компонента)
+        "NEWS_COUNT" => "2000",  // Количество новостей на странице
+        "PAGER_BASE_LINK_ENABLE" => "N",  // Включить обработку ссылок
+        "PAGER_DESC_NUMBERING" => "N",  // Использовать обратную навигацию
+        "PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",  // Время кеширования страниц для обратной навигации
+        "PAGER_SHOW_ALL" => "N",  // Показывать ссылку "Все"
+        "PAGER_SHOW_ALWAYS" => "N",  // Выводить всегда
+        "PAGER_TEMPLATE" => ".default",  // Шаблон постраничной навигации
+        "PAGER_TITLE" => "Новости",  // Название категорий
+        "PARENT_SECTION" => "24",  // ID раздела
+        "PARENT_SECTION_CODE" => "",  // Код раздела
+        "PREVIEW_TRUNCATE_LEN" => "",  // Максимальная длина анонса для вывода (только для типа текст)
+        "PROPERTY_CODE" => array(  // Свойства
+          0 => "PRICE",
+          1 => "",
+        ),
+        "SET_BROWSER_TITLE" => "N",  // Устанавливать заголовок окна браузера
+        "SET_LAST_MODIFIED" => "N",  // Устанавливать в заголовках ответа время модификации страницы
+        "SET_META_DESCRIPTION" => "N",  // Устанавливать описание страницы
+        "SET_META_KEYWORDS" => "N",  // Устанавливать ключевые слова страницы
+        "SET_STATUS_404" => "N",  // Устанавливать статус 404
+        "SET_TITLE" => "N",  // Устанавливать заголовок страницы
+        "SHOW_404" => "N",  // Показ специальной страницы
+        "SORT_BY1" => "ACTIVE_FROM",  // Поле для первой сортировки новостей
+        "SORT_BY2" => "SORT",  // Поле для второй сортировки новостей
+        "SORT_ORDER1" => "DESC",  // Направление для первой сортировки новостей
+        "SORT_ORDER2" => "ASC",  // Направление для второй сортировки новостей
+        "STRICT_SECTION_CHECK" => "N",  // Строгая проверка раздела для показа списка
+      ),
+        false
+      ); ?>
+      <? $APPLICATION->IncludeComponent("bitrix:news.list", "products", array(
+        "ACTIVE_DATE_FORMAT" => "d.m.Y",  // Формат показа даты
+        "ADD_SECTIONS_CHAIN" => "N",  // Включать раздел в цепочку навигации
+        "AJAX_MODE" => "N",  // Включить режим AJAX
+        "AJAX_OPTION_ADDITIONAL" => "",  // Дополнительный идентификатор
+        "AJAX_OPTION_HISTORY" => "N",  // Включить эмуляцию навигации браузера
+        "AJAX_OPTION_JUMP" => "N",  // Включить прокрутку к началу компонента
+        "AJAX_OPTION_STYLE" => "N",  // Включить подгрузку стилей
+        "CACHE_FILTER" => "N",  // Кешировать при установленном фильтре
+        "CACHE_GROUPS" => "N",  // Учитывать права доступа
+        "CACHE_TIME" => "36000000",  // Время кеширования (сек.)
+        "CACHE_TYPE" => "A",  // Тип кеширования
+        "CHECK_DATES" => "Y",  // Показывать только активные на данный момент элементы
+        "DETAIL_URL" => "",  // URL страницы детального просмотра (по умолчанию - из настроек инфоблока)
+        "DISPLAY_BOTTOM_PAGER" => "N",  // Выводить под списком
+        "DISPLAY_DATE" => "N",  // Выводить дату элемента
+        "DISPLAY_NAME" => "Y",  // Выводить название элемента
+        "DISPLAY_PICTURE" => "Y",  // Выводить изображение для анонса
+        "DISPLAY_PREVIEW_TEXT" => "Y",  // Выводить текст анонса
+        "DISPLAY_TOP_PAGER" => "N",  // Выводить над списком
+        "FIELD_CODE" => array(  // Поля
+          0 => "",
+          1 => "",
+        ),
+        "FILTER_NAME" => "",  // Фильтр
+        "HIDE_LINK_WHEN_NO_DETAIL" => "N",  // Скрывать ссылку, если нет детального описания
+        "IBLOCK_ID" => "20",  // Код информационного блока
+        "IBLOCK_TYPE" => "products",  // Тип информационного блока (используется только для проверки)
+        "INCLUDE_IBLOCK_INTO_CHAIN" => "N",  // Включать инфоблок в цепочку навигации
+        "INCLUDE_SUBSECTIONS" => "N",  // Показывать элементы подразделов раздела
+        "MESSAGE_404" => "",  // Сообщение для показа (по умолчанию из компонента)
+        "NEWS_COUNT" => "2000",  // Количество новостей на странице
+        "PAGER_BASE_LINK_ENABLE" => "N",  // Включить обработку ссылок
+        "PAGER_DESC_NUMBERING" => "N",  // Использовать обратную навигацию
+        "PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",  // Время кеширования страниц для обратной навигации
+        "PAGER_SHOW_ALL" => "N",  // Показывать ссылку "Все"
+        "PAGER_SHOW_ALWAYS" => "N",  // Выводить всегда
+        "PAGER_TEMPLATE" => ".default",  // Шаблон постраничной навигации
+        "PAGER_TITLE" => "Новости",  // Название категорий
+        "PARENT_SECTION" => "23",  // ID раздела
+        "PARENT_SECTION_CODE" => "",  // Код раздела
+        "PREVIEW_TRUNCATE_LEN" => "",  // Максимальная длина анонса для вывода (только для типа текст)
+        "PROPERTY_CODE" => array(  // Свойства
+          0 => "PRICE",
+          1 => "",
+        ),
+        "SET_BROWSER_TITLE" => "N",  // Устанавливать заголовок окна браузера
+        "SET_LAST_MODIFIED" => "N",  // Устанавливать в заголовках ответа время модификации страницы
+        "SET_META_DESCRIPTION" => "N",  // Устанавливать описание страницы
+        "SET_META_KEYWORDS" => "N",  // Устанавливать ключевые слова страницы
+        "SET_STATUS_404" => "N",  // Устанавливать статус 404
+        "SET_TITLE" => "N",  // Устанавливать заголовок страницы
+        "SHOW_404" => "N",  // Показ специальной страницы
+        "SORT_BY1" => "ACTIVE_FROM",  // Поле для первой сортировки новостей
+        "SORT_BY2" => "SORT",  // Поле для второй сортировки новостей
+        "SORT_ORDER1" => "DESC",  // Направление для первой сортировки новостей
+        "SORT_ORDER2" => "ASC",  // Направление для второй сортировки новостей
+        "STRICT_SECTION_CHECK" => "N",  // Строгая проверка раздела для показа списка
+      ),
+        false
+      ); ?>
     </div>
   </section>
 </div>

@@ -2,6 +2,36 @@ $(document).ready(function () {
 
     let isMobile = () => window.matchMedia('(max-width: 767.98px)').matches;
 
+    function loadSlick() {
+        $('.js-modal-slick').not('.slick-initialized').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            asNavFor: '.js-modal-slick-mini',
+            infinite: false,
+            arrows: false
+        });
+        $('.js-modal-slick-mini').not('.slick-initialized').slick({
+            infinite: false,
+            slidesToShow: 5,
+            slidesToScroll: 1,
+            arrows: true,
+            asNavFor: '.js-modal-slick',
+            draggable: false,
+            centerMode: true,
+            focusOnSelect: true,
+            prevArrow: '<div type="button" class="modal-slick-arrow modal-slick-arrow--left"><i class="fa fa-angle-left" aria-hidden="true"></i></div>',
+            nextArrow: '<div type="button" class="modal-slick-arrow modal-slick-arrow--right"><i class="fa fa-angle-right" aria-hidden="true"></i></div>',
+            responsive: [
+                {
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 3
+                    }
+                },
+            ]
+        });
+    }
+
     /* ----- Vue.js Applications START ----- */
     let app = new Vue({
         /***
@@ -127,7 +157,7 @@ $(document).ready(function () {
 
     /* ----- Constructor kinds changer START ----- */
     function change_constructor_list_2(bool_show) {
-        let $constructor_list_2 = $('.constructor__list-2');
+        let $constructor_list_2 = $('.constructor div:nth-of-type(2)');
 
         if (bool_show) {
             $constructor_list_2.addClass('constructor__list--show');
@@ -139,7 +169,7 @@ $(document).ready(function () {
     }
 
     function change_constructor_list_3(bool_show) {
-        let $constructor_list_3 = $('.constructor__list-3');
+        let $constructor_list_3 = $('.constructor div:nth-of-type(3)');
 
         if (bool_show) {
             $constructor_list_3.addClass('constructor__list--show');
@@ -153,7 +183,7 @@ $(document).ready(function () {
     let is_show_list_2 = false;
     let is_show_list_3 = false;
 
-    $('.js-type-1').on('click', function () {
+    $('.constructor-types__list div:nth-of-type(1)').on('click', function () {
         let timeout = 0;
         if (isMobile()) {
             timeout += 1000
@@ -164,7 +194,7 @@ $(document).ready(function () {
             change_constructor_list_3(false);
         }, timeout);
     });
-    $('.js-type-2').on('click', function () {
+    $('.constructor-types__list div:nth-of-type(2)').on('click', function () {
         let timeout = 0;
         if (isMobile()) {
             timeout += 1000
@@ -180,7 +210,7 @@ $(document).ready(function () {
             }
         }, timeout);
     });
-    $('.js-type-3').on('click', function () {
+    $('.constructor-types__list div:nth-of-type(3)').on('click', function () {
         let timeout = 0;
         if (isMobile()) {
             timeout += 1000
@@ -225,33 +255,20 @@ $(document).ready(function () {
     });
 
     $('.js-constructor__item').on('click', function (e) {
-        $('.js-modal-slick').not('.slick-initialized').slick({
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            asNavFor: '.js-modal-slick-mini',
-            infinite: false,
-            arrows: false
+        $.ajax({
+            url: "/ajax/get_product.php",
+            method: 'POST',
+            data: {
+                'product_id': $(e.currentTarget).data("id")
+            },
+            async: false,
+
+            success: function (request) {
+                $('#constructor-modal .js-constructor-modal-wrap').html(request)
+            }
         });
-        $('.js-modal-slick-mini').not('.slick-initialized').slick({
-            infinite: false,
-            slidesToShow: 5,
-            slidesToScroll: 1,
-            arrows: true,
-            asNavFor: '.js-modal-slick',
-            draggable: false,
-            centerMode: true,
-            focusOnSelect: true,
-            prevArrow: '<div type="button" class="modal-slick-arrow modal-slick-arrow--left"><i class="fa fa-angle-left" aria-hidden="true"></i></div>',
-            nextArrow: '<div type="button" class="modal-slick-arrow modal-slick-arrow--right"><i class="fa fa-angle-right" aria-hidden="true"></i></div>',
-            responsive: [
-                {
-                    breakpoint: 768,
-                    settings: {
-                        slidesToShow: 3
-                    }
-                },
-            ]
-        });
+
+        loadSlick();
         $('#constructor-modal').modal('show');
     });
 
@@ -276,7 +293,26 @@ $(document).ready(function () {
         }
     });
 
-    $('.js-add-to-cart').on('click', function (event) {
+    $('body').on('click', '.js-cart-item', function (event) {
+        $.ajax({
+            url: "/ajax/get_product.php",
+            method: 'POST',
+            data: {
+                'product_id': $(event.currentTarget).data("id")
+            },
+            async: false,
+
+            success: function (request) {
+                $('#cart-modal').modal('hide');
+                $('#constructor-modal .js-constructor-modal-wrap').html(request);
+                loadSlick();
+                $('#constructor-modal').modal('show');
+            }
+        });
+
+    });
+
+    $('body').on('click', '.js-add-to-cart', function (event) {
         let data_obj = $(event.currentTarget).parent().serializeArray(),
             item_id = data_obj[0]['value'];
 
@@ -314,9 +350,7 @@ $(document).ready(function () {
             1200: {items: 4}
         }
     });
-    // autoplay: true,
-    //     autoplayTimeout: 2000,
-    //     autoplayHoverPause: true,
+
     $('.js-partners-carousel').owlCarousel({
         loop: true,
         margin: 150,
