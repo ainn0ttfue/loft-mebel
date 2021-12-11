@@ -113,6 +113,15 @@ $(document).ready(function () {
                     this.total_count += this.cart[idx].count;
                     this.total_price += this.cart[idx].count * this.cart[idx].price;
                 }
+            },
+            get_items_str() {
+                let result_string = '';
+                for (let idx in this.cart) {
+                    let item = this.cart[idx]
+                    result_string += '"' + item.title + '" (' + item.price + ' ₽) x ' + item.count + ' = ' + (item.price * item.count) + ' руб. \n';
+                }
+                result_string += 'Итого ' + this.total_price + ' руб.'
+                return result_string;
             }
         }
     });
@@ -350,7 +359,6 @@ $(document).ready(function () {
             1200: {items: 4}
         }
     });
-
     $('.js-partners-carousel').owlCarousel({
         loop: true,
         margin: 150,
@@ -371,4 +379,19 @@ $(document).ready(function () {
         }
     });
     /* ----- Owl slider END ----- */
+
+    const number = '79140003787';
+
+    function sendToWhatsapp(text, phone) {
+        text = encodeURIComponent(text);
+        let url = `https://wa.me/${phone}?text=${text}`;
+
+        window.open(url);
+    }
+
+    $('.js-send-order').on('click', function (e) {
+        const text = 'Заказ с сайта loft-mebel.store:\n\n' + app.get_items_str();
+
+        sendToWhatsapp(text, number);
+    });
 });

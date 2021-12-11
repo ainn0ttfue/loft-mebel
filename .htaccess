@@ -1,0 +1,17 @@
+Options All -ExecCGI -Indexes -Includes +FollowSymLinks
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # rerite to https
+    RewriteCond %{REQUEST_URI} ^(.*)/index\.php$
+    RewriteRule ^(.*)index\.php$ https://%{HTTP_HOST}/$1 [R=302,L]
+
+    # redirect from multiple slashes
+    RewriteCond %{THE_REQUEST} //
+    RewriteRule .* /$0 [R=301,L]
+
+    # redirect from www
+    RewriteCond %{HTTP_HOST} ^www\.(.*)$
+    RewriteRule ^(.*)$ http://%1/$1 [L,R=301]
+</IfModule>

@@ -2,8 +2,14 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <? $APPLICATION->ShowHead(); ?>
+
   <title><? $APPLICATION->ShowTitle() ?></title>
+
+  <link rel="icon" href="/favicon.png" type="image/png">
+  <link rel="canonical" href="https://loft-mebel.store"/>
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -80,9 +86,9 @@
     <div class="row">
       <div class="col-lg-12">
         <div class="header__content d-flex flex-column justify-content-center">
-          <h1 class="header__title">
+          <p class="header__title">
             LOFT MEBEL
-          </h1>
+          </p>
           <p class="header__desc">
             Делаем качественную и удобную мебель для Вас
           </p>
@@ -195,7 +201,7 @@
     <div class="modal-dialog modal-md" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLongTitle">Ваша корзина</h5>
+          <p class="modal-title h4" id="exampleModalLongTitle">Ваша корзина</p>
           <button type="button" class="close m-0 p-0 modal__close-btn" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
@@ -227,7 +233,9 @@
           <p class="text-center mb-0" v-show="total_count === 0">В вашей корзине пусто</p>
         </div>
         <div class="modal-footer">
-          <button v-show="total_count > 0" type="button" class="button--dark button m-auto">Сделать заказ</button>
+          <button v-show="total_count > 0" type="button" class="button--dark button m-auto js-send-order">
+            Отправить заявку (WhatsApp <i class="fa fa-whatsapp" aria-hidden="true"></i>)
+          </button>
         </div>
       </div>
     </div>

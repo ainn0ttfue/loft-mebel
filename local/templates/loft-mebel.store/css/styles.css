@@ -277,6 +277,11 @@ body {
     overflow: hidden;
 }
 
+.constructor .owl-stage {
+    display: flex;
+    align-items: center;
+}
+
 .constructor__item {
     cursor: pointer;
 }
@@ -662,6 +667,15 @@ a.contacts__title:hover {
     .table-sequence__arrow {
         transform: rotate(90deg);
         margin: 1rem 0;
+    }
+
+    .constructor .owl-dots {
+        margin: 0;
+        height: 0;
+    }
+
+    .constructor__img {
+        max-height: 200px;
     }
 
     .constructor-types__item {
