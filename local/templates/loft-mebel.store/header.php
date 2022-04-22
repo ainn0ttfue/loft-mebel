@@ -346,7 +346,7 @@
         "SHOW_404" => "N",  // Показ специальной страницы
         "SORT_BY1" => "ACTIVE_FROM",  // Поле для первой сортировки новостей
         "SORT_BY2" => "SORT",  // Поле для второй сортировки новостей
-        "SORT_ORDER1" => "DESC",  // Направление для первой сортировки новостей
+        "SORT_ORDER1" => "ASC",  // Направление для первой сортировки новостей
         "SORT_ORDER2" => "ASC",  // Направление для второй сортировки новостей
         "STRICT_SECTION_CHECK" => "N",  // Строгая проверка раздела для показа списка
       ),
@@ -407,7 +407,7 @@
         "SHOW_404" => "N",  // Показ специальной страницы
         "SORT_BY1" => "ACTIVE_FROM",  // Поле для первой сортировки новостей
         "SORT_BY2" => "SORT",  // Поле для второй сортировки новостей
-        "SORT_ORDER1" => "DESC",  // Направление для первой сортировки новостей
+        "SORT_ORDER1" => "ASC",  // Направление для первой сортировки новостей
         "SORT_ORDER2" => "ASC",  // Направление для второй сортировки новостей
         "STRICT_SECTION_CHECK" => "N",  // Строгая проверка раздела для показа списка
       ),
@@ -466,9 +466,9 @@
         "SET_STATUS_404" => "N",  // Устанавливать статус 404
         "SET_TITLE" => "N",  // Устанавливать заголовок страницы
         "SHOW_404" => "N",  // Показ специальной страницы
-        "SORT_BY1" => "ACTIVE_FROM",  // Поле для первой сортировки новостей
+        "SORT_BY1" => "ID",  // Поле для первой сортировки новостей
         "SORT_BY2" => "SORT",  // Поле для второй сортировки новостей
-        "SORT_ORDER1" => "DESC",  // Направление для первой сортировки новостей
+        "SORT_ORDER1" => "ASC",  // Направление для первой сортировки новостей
         "SORT_ORDER2" => "ASC",  // Направление для второй сортировки новостей
         "STRICT_SECTION_CHECK" => "N",  // Строгая проверка раздела для показа списка
       ),
@@ -617,32 +617,32 @@
 </section>
 
 <!-- Мы в Instagram -->
-<section class="section text-center inst-section" id="instagram">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-12">
-        <h2 class="section__title">
-          Мы в Instagram <i class="fa fa-instagram" aria-hidden="true"></i>
-        </h2>
-      </div>
-      <div class="col-12">
-        <a href="https://www.instagram.com/aurora_mebel.irk/" class="d-block" target="_blank">
-          <div class="embedsocial-hashtag" data-ref="7a4e308a251638060715c3444b32defa98814146"></div>
-          <script>(function (d, s, id) {
-                  var js;
-                  if (d.getElementById(id)) {
-                      return;
-                  }
-                  js = d.createElement(s);
-                  js.id = id;
-                  js.src = "https://embedsocial.com/cdn/ht.js";
-                  d.getElementsByTagName("head")[0].appendChild(js);
-              }(document, "script", "EmbedSocialHashtagScript"));</script>
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
+<!--<section class="section text-center inst-section" id="instagram">-->
+<!--  <div class="container">-->
+<!--    <div class="row">-->
+<!--      <div class="col-lg-12">-->
+<!--        <h2 class="section__title">-->
+<!--          Мы в Instagram <i class="fa fa-instagram" aria-hidden="true"></i>-->
+<!--        </h2>-->
+<!--      </div>-->
+<!--      <div class="col-12">-->
+<!--        <a href="https://www.instagram.com/aurora_mebel.irk/" class="d-block" target="_blank">-->
+<!--          <div class="embedsocial-hashtag" data-ref="7a4e308a251638060715c3444b32defa98814146"></div>-->
+<!--          <script>(function (d, s, id) {-->
+<!--                  var js;-->
+<!--                  if (d.getElementById(id)) {-->
+<!--                      return;-->
+<!--                  }-->
+<!--                  js = d.createElement(s);-->
+<!--                  js.id = id;-->
+<!--                  js.src = "https://embedsocial.com/cdn/ht.js";-->
+<!--                  d.getElementsByTagName("head")[0].appendChild(js);-->
+<!--              }(document, "script", "EmbedSocialHashtagScript"));</script>-->
+<!--        </a>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</section>-->
 
 <!-- Контакты -->
 <section class="section" id="contacts">
@@ -703,12 +703,12 @@
           бульвар Рябикова, 43В
         </p>
 
-        <a target="_blank" href="https://www.instagram.com/aurora_mebel.irk/" class="contacts__title">
-          aurora_mebel.irk <i class="fa fa-instagram" aria-hidden="true"></i>
-        </a>
-        <p class="contacts__text">
-          Смотрите наши работы в инстаграме
-        </p>
+<!--        <a target="_blank" href="https://www.instagram.com/aurora_mebel.irk/" class="contacts__title">-->
+<!--          aurora_mebel.irk <i class="fa fa-instagram" aria-hidden="true"></i>-->
+<!--        </a>-->
+<!--        <p class="contacts__text">-->
+<!--          Смотрите наши работы в инстаграме-->
+<!--        </p>-->
 
       </div>
     </div>

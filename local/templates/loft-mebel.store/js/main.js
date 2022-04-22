@@ -273,7 +273,7 @@ $(document).ready(function () {
             async: false,
 
             success: function (request) {
-                $('#constructor-modal .js-constructor-modal-wrap').html(request)
+                $('#constructor-modal .js-constructor-modal-wrap').html(request);
             }
         });
 

@@ -27,7 +27,7 @@
           <li><a href="#header" class="link">Главная</a></li>
           <li><a href="#constructor" class="link">Конструктор</a></li>
           <li><a href="#partners" class="link">Партнеры</a></li>
-          <li><a href="#instagram" class="link">Мы в Instagram</a></li>
+<!--          <li><a href="#instagram" class="link">Мы в Instagram</a></li>-->
           <li><a href="#contacts" class="link">Контакты</a></li>
         </ul>
       </div>
